@@ -45,5 +45,21 @@
   <%= @user.lon %>
 </p>
 
+<h2>Interests</h2>
+
+
+<table>
+  <tr>
+    <th>Interest</th>
+    <th>Description</th>
+  </tr>
+  <% @user.interests.each do |interest| %>
+    <tr>
+      <td><%= interest.name %></td>
+      <td><%= interest.description %></td>
+    </tr>
+  <% end %>
+</table>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @interest.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @interest.description %>
+</p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @interest.lat %>
+</p>
+
+<p>
+  <strong>Lon:</strong>
+  <%= @interest.lon %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @interest.user.full_name rescue nil %> 
+</p>
+
+<%= link_to 'Edit', edit_interest_path(@interest) %> |
+<%= link_to 'Back', interests_path %>
