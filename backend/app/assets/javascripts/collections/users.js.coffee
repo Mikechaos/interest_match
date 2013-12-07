@@ -1,3 +1,3 @@
 class InterestMatch.Collections.Users extends Backbone.Collection
-
-  model: InterestMatch.Models.User
+	url: "/users"
+	model: InterestMatch.Models.User
