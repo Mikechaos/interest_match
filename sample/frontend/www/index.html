@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Nightowl</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="css/main.css" rel="stylesheet" media="screen">
+		<link href='http://fonts.googleapis.com/css?family=Anaheim' rel='stylesheet' type='text/css'>
+		<script type="text/javascript">
+
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-39552207-1']);
+		_gaq.push(['_setDomainName', 'getnightowl.com']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+
+		</script>
+	</head>
+	<body>
+
+		<header><img src="images/ui/logo.png" /></header>
+		
+		<div id="content-home" class="page hide">
+			<h1>Welcome to Night&nbsp;Owl</h1>
+			<p>
+				Join the night tribe. <br/>
+				Choose a username for the night. <br/>
+				Be bold, enjoy this night 'till the sun pops up.
+			</p>
+			<p>
+				<input type="text" placeholder="Choose a username" class="username" />
+			</p>
+
+			<p>
+				<a href="#" class="btn btn-large join">Join the conversation</a>
+			</p>
+
+			<div class="alert alert-error hide localisation">
+				Hey, don't be shy it's anonymous. If we can't locate you, you'll end all alone in your chat room.<br/>
+				<strong>In short, your geotagging is mandatory.</strong>
+			</div>
+
+			<div class="alert alert-error hide empty">
+				Please add a valid username.
+			</div>
+
+		</div>	
+
+ 		<div id="content-user" class="page hide">
+			<h1><span class="user count">0</span> Users</h1>
+			<ul class="user-list"></ul>
+		</div>
+
+		<div id="content-message" class="page hide">
+			<h1><span class="count message">0</span> Messages</h1>
+			<ul class="message-list promote">
+				<li><span class='message'>Hello to everybody @ Notman House!</span><br/><span class='username'>raffpaquin</span></li>
+				<li><span class='message'>Party tonight @ Benelux. 2 for 1 on beer before midnight.</span><br/><span class='username'>Roger</span></li>
+			</ul>
+			<ul class="message-list regular"></ul>
+			<div class="input_container">
+				<input type="text" class="message-creator" />
+			</div>
+		</div>
+
+		<div id="content-bid" class="page hide">
+			<h1>Bidding</h1>
+			<p>
+				Having the craziest idea? Promote it!<br/>
+				You can make your post sticky. Buy in-app credit and bid as needed. 
+			</p>
+			<p>
+				The two highest bid posts are sticky until you're overbid. That simple.
+				You don't want to be overbid? Use our tool to be promoted, as you want with the amount you want to afford.
+			</p>
+
+			<p>
+				Current Credits: <span class="label">10 000</span>
+			</p>
+
+			<p>
+				<a href="#" class="btn btn-large" onclick="return false;">Buy Credits</a>
+			</p>
+		</div>
+
+		<footer>
+			<div class="radius-selection-container" style="position:absolute; top:-1000px; left:-1000px; height:1px; width:1px;">
+				<select id="radius_selection">
+					<option value="500">Real close</option>
+					<option value="1000">Close</option>
+					<option value="2500">Further</option>
+					<option value="5000">Even further</option>
+					<option value="8000">Much farther</option>
+				</select>
+
+				<select id="enable_geolocation">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</select>
+				<select id="settings_selection">
+					<option>Pick something</option>
+					<option value="radius_selection">Choose Audience</option>
+				</select>
+			</div>
+			<ul class="menu">
+				<li data-item-uid="user"><a href="#user" class="li_user"><span class="user count">0</span></a></li>
+				<li data-item-uid="message"><a href="#message" class="li_bubble"><span class="message count">0</span></a></li>
+				<!--<li data-item-uid="bid"><a href="#bid" class="li_clip"></a></li>-->
+				<li data-item-uid="bid"><a href="#settings" onclick="$('#radius_selection').focus(); return false;" class="li_location"></a></li> <!--
+				<li data-item-uid="bid"><a href="#world" onclick="$('#settings_selection').focus(); return false;" class="li_world"></a></li>
+				-->
+			</ul>
+		</footer>
+
+		<script src="js/vendor.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="js/coffee/temp.js"></script>
+		<script type="text/javascript">
+		if(phoneGap){
+			document.addEventListener("deviceready", function(){
+				app.init();
+			}, false);
+		} else {
+			app.init();
+		}
+		</script>
+	</body>
+</html>

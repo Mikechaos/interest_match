@@ -1,0 +1,148 @@
+body {
+    padding-top: 60px;
+    background: #343745;
+    color: white;
+}
+.header{margin-bottom: 30px;}
+.header h1{text-align: center;}
+
+/* Features ============================================= */
+
+a.appstore img {
+    margin: 20px 5px 0 0;
+}
+
+img.avatar {
+    margin: 0 1.5em 1.5em 0;
+    width: 100px;
+}
+
+#features {
+    margin: 1.5em 0;
+    min-height: 370px;
+    font-family: 'Anaheim', sans-serif;
+}
+
+#features td {
+    vertical-align: top;
+}
+
+#features strong{
+    font-size: 1.1em;
+    color: #e5565a;
+}
+#features i{color: #e5565a;}
+
+#features .messages{margin-top: 30px;position: }
+#features .message{
+    height: auto;
+    min-height: 50px;
+    background: #83858e;
+    width: 100%;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    -m-border-radius: 5px;
+    border-radius: 5px;
+    padding:5px;
+    margin-bottom: 10px;
+}
+
+#features .messages span.user{
+    text-align: right;
+    width: 100%;
+    display: block;
+    font-size: 0.9em;
+    opacity: 0.7;
+}
+#features .messages span.user:before{
+    content: "-- "
+}
+#myModal{
+    color: black;
+}
+/* Screen control ======================================= */
+
+.carousel-nav {
+    margin-top: 1.5em;
+    margin-left: 105px;
+}
+
+.carousel-nav a {
+    float: left;
+    width: 17px;
+    height: 16px;
+    background: url('../img/bullet.png') no-repeat;
+    text-indent: -9999px;
+    border: 0;
+    margin-right: 3px;
+}
+.carousel-nav a.active {
+    background: url('../img/bullet-active.png') no-repeat;
+}
+
+
+/* Phones =============================================== */
+
+div.iphone, div.android, div.wphone {
+    position: relative;
+    width: 290px;
+}
+
+div.iphone > div.carousel, div.android > div.carousel, div.wphone > div.carousel {
+    position: absolute;
+}
+
+
+/* iPhone styles  */
+
+div.iphone {
+    background: url('../img/phones/iphone.png') no-repeat top left;
+    height: 565px;
+}
+
+div.iphone > div.carousel {
+    left: 24px;
+    top: 102px;
+}
+
+div.iphone > div.carousel img {
+    height: 365px;
+    width: 245px;
+}
+
+
+/* Android styles */
+
+div.android {
+    background: url('../img/phones/htc.png') no-repeat top left;
+    height: 556px;
+}
+
+div.android > div.carousel {
+    left: 24px;
+    top: 57px;
+}
+
+div.android > div.carousel img {
+    height: 428px;
+    width: 240px;
+}
+
+
+/* Windows Phone styles */
+
+div.wphone {
+    background: url('../img/phones/lumia900.png') no-repeat top left;
+    height: 545px;
+}
+
+div.wphone > div.carousel {
+    left: 23px;
+    top: 73px;
+}
+
+div.wphone > div.carousel img {
+    height: 407px;
+    width: 244px;
+}
