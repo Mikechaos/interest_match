@@ -9,7 +9,11 @@ class User < ActiveRecord::Base
   accepts_nested_attributes_for :interests, allow_destroy: true
 
   def full_name
-    "#{first_name} #{last_name}"
+    if name.present?
+      name
+    else
+      "#{first_name} #{last_name}"
+    end
   end
 
   def self.find_for_facebook_oauth(auth, signed_in_resource=nil)

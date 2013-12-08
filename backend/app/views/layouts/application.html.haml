@@ -62,6 +62,11 @@
                     %a{:href => "#"} Separated link
                   %li
                     %a{:href => "#"} One more separated link
+            - if user_signed_in?
+              %ul.nav.navbar-nav.pull-right
+                %li= link_to current_user.full_name, '#'
+
+		
           / /.nav-collapse
       / Begin page content
       .container

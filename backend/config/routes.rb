@@ -1,6 +1,6 @@
 InterestMatch::Application.routes.draw do
   get "welcome/index"
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :interests
 
   resources :users
