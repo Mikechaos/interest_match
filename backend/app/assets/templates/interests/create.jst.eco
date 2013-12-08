@@ -36,7 +36,7 @@
   <div class="span11">
   <textarea id="interest_description" class="form-control" rows="3" placeholder="Description"></textarea>
   </div>
-  <button class="btn btn-primary btn-lg btn-block" id="createButton">Create</button>
+  <button class="btn btn-primary btn-lg btn-block" id="createButton">SAVE</button>
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
       <div class="navbar-header">
