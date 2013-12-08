@@ -13,17 +13,11 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		if userExists
 			InterestMatch.setCurrentUser(userExists.id)
 		else
-			@createFbConnect()
+			@createFbConnect(fbConnect)
 		@updateUserCoords()
 	
 	createFbConnect: (fbConnect) ->
-		alert InterestMatch
-		alert InterestMatch.Models
-		alert InterestMatch.Models.User
-
-
 		user = new InterestMatch.Models.User
-
 		alert fbConnect
 		alert fbConnect.email
 
