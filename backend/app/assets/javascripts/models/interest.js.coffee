@@ -5,6 +5,7 @@ class InterestMatch.Models.Interest extends Backbone.Model
 		description: ""
 		lat: 0
 		lon: 0
-		user: 0
+		user: 1
 
 	initialize: ->
+		@user = InterestMatch.users.retrieveUser @get('user_id')

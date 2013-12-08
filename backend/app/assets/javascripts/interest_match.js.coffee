@@ -7,9 +7,14 @@ window.InterestMatch =
 	initialize: ->
 		@fetchUsers()
 		@fetchInterests()
+		@setGlobals()
 		#@initializedGeo.then =>
 		@createInterestView()
 
+	setGlobals: ->
+		InterestMatch.users = @users
+		InterestMatch.interests = @interests
+		InterestMatch.currentUser = @users.findWhere id: 1
 	createInterestView: ->
 		@interestView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest #lon: @currentLon, lat: @currentLat
 		@interestView.render()
