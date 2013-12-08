@@ -8,7 +8,7 @@ window.InterestMatch =
 		@fetchElements()
 		@createInterestView()
 
-	setCurrentUser: (id = 1) ->
+	setCurrentUser: (id = 100) ->
 		InterestMatch.userInitialized.then =>
 			@currentUser = @users.findWhere id: id
 
@@ -21,6 +21,10 @@ window.InterestMatch =
 	showMyInterestsView: ->
 		@closeCurrentView()
 		@currentView = new InterestMatch.Views.MyInterests collection: @interests.filterByUserId(InterestMatch.currentUser.id)
+		@showCurrentView()
+	showMainView: ->
+		@closeCurrentView()
+		@currentView = new InterestMatch.Views.InterestsIndex collection: @interests.filterByRadius(15*5280)
 		@showCurrentView()
 	createInterestView: ->
 		@currentView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest

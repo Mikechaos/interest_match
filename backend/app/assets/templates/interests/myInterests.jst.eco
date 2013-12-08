@@ -10,12 +10,12 @@
   </div>
   <div class="list-group">
  	<!-- Tap on link = edit, Tap on &times = delete-->
-    <a href="#" class="list-group-item">Food
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </a>
-    <a href="#" class="list-group-item">Music
-      <button type="button" class="close" data-dismiss="alert">&times;</button>
-    </a>
+    <!-- <a href="#" class="list-group-item">Food -->
+    <!--   <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+    <!-- </a> -->
+    <!-- <a href="#" class="list-group-item">Music -->
+    <!--   <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+    <!-- </a> -->
   </div>
   <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -27,7 +27,7 @@
             </a>
           </li>
           <li>
-            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+            <a id="mainView" href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
               Main
             </a>
           </li>

@@ -2,7 +2,8 @@ class InterestMatch.Views.InterestsCreate extends Backbone.View
 	template: JST['interests/create']
 	events:
 		"click #createButton": "createInterest"
-
+		"click #mainView": "showMainView"
+		"click #interestsView": "showInterestView"
 	initialize: ->
 
 	render: ->
@@ -23,7 +24,14 @@ class InterestMatch.Views.InterestsCreate extends Backbone.View
 	proceedForm: ->
 		@cleanForm()
 		InterestMatch.showMyInterestsView()
+
 	cleanForm: ->
 		_.each @formElem, (elem) =>
 			console.log @$(elem)
 			@$(elem).val('')
+
+	showMainView: ->
+		InterestMatch.showMainView()
+
+	showInterestsView: ->
+		InterestMatch.showMyInterestsView()

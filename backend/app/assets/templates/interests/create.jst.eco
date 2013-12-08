@@ -42,12 +42,12 @@
       <div class="navbar-header">
         <ul class="nav navbar-nav">
           <li>
-            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+            <a id="interestsView" href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
               Interest
             </a>
           </li>
           <li>
-            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+            <a id="mainView" href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
               Main
             </a>
           </li>
