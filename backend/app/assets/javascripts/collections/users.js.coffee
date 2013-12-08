@@ -21,7 +21,12 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		alert InterestMatch.Models
 		alert InterestMatch.Models.User
 
+
 		user = new InterestMatch.Models.User
+
+		alert fbConnect
+		alert fbConnect.email
+
 		user.set 'email', fbConnect.email
 		user.set 'name', fbConnect.name
 		user.set 'first_name', fbConnect.first_name
