@@ -6,7 +6,5 @@ class InterestMatch.Models.Interest extends Backbone.Model
 		lat: 0
 		lon: 0
 		user: 0
-		
 
 	initialize: ->
-		console.log arguments

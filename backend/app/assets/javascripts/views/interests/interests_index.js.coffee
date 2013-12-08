@@ -1,3 +1,3 @@
 class InterestMatch.Views.InterestsIndex extends Backbone.View
 
-  template: JST['interests/index']
+	template: JST['interests/index']
