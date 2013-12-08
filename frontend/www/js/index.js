@@ -17,44 +17,6 @@
  * under the License.
  */
 
-var onSuccess = function(position) {
-	var $elem
-	app.position = position;
-	console.log(position);
-	$elem = $('#interest_lon').val(position.coords.longitude);
-	$elem = $('#interest_lat').val(position.coords.latitude);
-	// InterestMatch.currentUser.set('lat', position.coords.latitude)
-	// InterestMatch.currentUser.set('lon', position.coords.longitude)
-	interval = setInterval(function () {
-		if (InterestMatch.currentUser == null) {
-			InterestMatch.setCurrentUser && InterestMatch.setCurrentUser()
-		}
-		else {
-			clearInterval(interval);
-			InterestMatch.currentUser.save({
-				lat: position.coords.latitude,
-				lon: position.coords.longitude
-			});
-		}
-	}, 250);
-
-	// $elem.attr('data-lat', position.coords.latitude);
-	// var element = document.getElementById('geolocation');
-	// element.innerHTML = 'Latitude: '		   + position.coords.latitude			  + '<br />' +
-	// 	'Longitude: '		  + position.coords.longitude			 + '<br />' +
-	// 	'Altitude: '		   + position.coords.altitude			  + '<br />' +
-	// 	'Accuracy: '		   + position.coords.accuracy			  + '<br />' +
-	// 	'Altitude Accuracy: '  + position.coords.altitudeAccuracy	  + '<br />' +
-	// 	'Heading: '			+ position.coords.heading			   + '<br />' +
-	// 	'Speed: '			  + position.coords.speed				 + '<br />' +
-	// 	'Timestamp: '		  + position.timestamp					+ '<br />';
-};
-
-var onError = function(error) {
-	alert('code: '	+ error.code	+ '\n' +
-		  'message: ' + error.message + '\n');
-}
-
 var app = {
 	// Application Constructor
 	initialize: function() {
@@ -73,7 +35,11 @@ var app = {
 	// function, we must explicity call 'app.receivedEvent(...);'
 	onDeviceReady: function() {
 		app.receivedEvent('deviceready');
-		navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 0, timeout: 5000, enableHighAccuracy: true });
+		app.triggerGeoLocation()
+	},
+
+	triggerGeoLocation: function () {
+		navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError, { maximumAge: 0, timeout: 5000, enableHighAccuracy: true });
 	},
 
 	// Update DOM on a Received Event
@@ -86,7 +52,45 @@ var app = {
 		// receivedElement.setAttribute('style', 'display:block;');
 
 		// console.log('Received Event: ' + id);
-	}
+	},
+	onSuccess: function(position) {
+		var $elem
+		app.position = position;
+		console.log(position);
+		$elem = $('#interest_lon').val(position.coords.longitude);
+		$elem = $('#interest_lat').val(position.coords.latitude);
+		// InterestMatch.currentUser.set('lat', position.coords.latitude)
+		// InterestMatch.currentUser.set('lon', position.coords.longitude)
+		interval = setInterval(function () {
+			if (InterestMatch.currentUser == null) {
+				InterestMatch.setCurrentUser && InterestMatch.setCurrentUser()
+			}
+			else {
+				clearInterval(interval);
+				InterestMatch.currentUser.save({
+					lat: position.coords.latitude,
+					lon: position.coords.longitude
+				});
+			}
+		}, 250);
+
+		// $elem.attr('data-lat', position.coords.latitude);
+		// var element = document.getElementById('geolocation');
+		// element.innerHTML = 'Latitude: '		   + position.coords.latitude			  + '<br />' +
+		// 	'Longitude: '		  + position.coords.longitude			 + '<br />' +
+		// 	'Altitude: '		   + position.coords.altitude			  + '<br />' +
+		// 	'Accuracy: '		   + position.coords.accuracy			  + '<br />' +
+		// 	'Altitude Accuracy: '  + position.coords.altitudeAccuracy	  + '<br />' +
+		// 	'Heading: '			+ position.coords.heading			   + '<br />' +
+		// 	'Speed: '			  + position.coords.speed				 + '<br />' +
+		// 	'Timestamp: '		  + position.timestamp					+ '<br />';
+	},
+
+	onError: function(error) {
+		alert('code: '	+ error.code	+ '\n' +
+			  'message: ' + error.message + '\n');
+	},
+
 };
 
 $(document).ready(function() {
