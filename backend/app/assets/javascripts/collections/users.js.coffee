@@ -12,9 +12,9 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		userExists = @checkIfEmailExists fbConnect.email
 		if userExists
 			InterestMatch.setCurrentUser(userExists.id)
-			@updateCoords()
 		else
 			@createFbConnect()
+		@updateUserCoords()
 	
 	createFbConnect: (fbConnect) ->
 		user = new InterestMatch.Models.User
@@ -22,5 +22,5 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		user.save()
 		InterestMatch.setCurrentUser(user.id)
 
-	updateCoords: ->
-		console.log app.position
+	updateUserCoords: ->
+		app.triggerGeoLocation()
