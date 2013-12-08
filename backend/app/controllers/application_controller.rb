@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   after_filter :set_access_control_headers
-
+	skip_before_filter :verify_authenticity_token
   private
 
   def set_access_control_headers
