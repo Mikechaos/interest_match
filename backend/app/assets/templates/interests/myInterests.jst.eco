@@ -1,0 +1,43 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <a class="navbar-brand" href="#">Project name</a>
+  <!--/.nav-collapse -->
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h3>My Interests</h3>
+  </div>
+ <div class="list-group">
+ 				<!-- Tap on link = edit, Tap on &times = delete-->
+                <a href="#" class="list-group-item">Food
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </a>
+                <a href="#" class="list-group-item">Music
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                </a>
+              </div>
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+              Interest
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+              Main
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="gear">
+              More
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

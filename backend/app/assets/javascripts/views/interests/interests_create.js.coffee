@@ -1,7 +1,7 @@
 class InterestMatch.Views.InterestsCreate extends Backbone.View
 	template: JST['interests/create']
 	events:
-		"click button": "createInterest"
+		"click #createButton": "createInterest"
 
 	initialize: ->
 

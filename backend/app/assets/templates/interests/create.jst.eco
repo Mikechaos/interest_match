@@ -1,6 +1,63 @@
-<label>Create Interests</label>
-<input id="interest_name" type="text">
-<textarea id="interest_description"></textarea>
-<button>Create</button>
-<input type="hidden" value="" id="interest_lon">
-<input type="hidden" value="" id="interest_lat">
+<!-- <input id="interest_name" type="text"> -->
+<!-- <textarea id="interest_description"></textarea> -->
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <a class="navbar-brand" href="#">Project name</a>
+  <!--/.nav-collapse -->
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h3>+ Interest</h3>
+  </div>
+  
+  <div class="span11">
+    <input id="interest_name" type="text" class="form-control" placeholder="New Desire">
+  </div>
+  <br/>
+<!-- Split button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-default">Food</button>
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    <span class="caret"></span>
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu" role="menu">
+    <li><a href="#">Food</a></li>
+    <li><a href="#">Music</a></li>
+    <li><a href="#">Activity</a></li>
+  </ul>
+</div>
+<br/>
+  <!-- Begin Description Input-->
+
+  <input type="hidden" value="" id="interest_lon">
+  <input type="hidden" value="" id="interest_lat">
+  <div class="span11">
+  <textarea id="interest_description" class="form-control" rows="3" placeholder="Description"></textarea>
+  </div>
+  <button class="btn btn-primary btn-lg btn-block" id="createButton">SAVE</button>
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+              Interest
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+              Main
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="gear">
+              ME
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

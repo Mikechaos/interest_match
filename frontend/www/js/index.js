@@ -19,9 +19,24 @@
 
 var onSuccess = function(position) {
 	var $elem
-	
-	$elem = $('#interest_lon').val(position.coords.longitude)
-	$elem = $('#interest_lat').val(position.coords.latitude)
+	app.position = position;
+	console.log(position);
+	$elem = $('#interest_lon').val(position.coords.longitude);
+	$elem = $('#interest_lat').val(position.coords.latitude);
+	// InterestMatch.currentUser.set('lat', position.coords.latitude)
+	// InterestMatch.currentUser.set('lon', position.coords.longitude)
+	interval = setInterval(function () {
+		if (InterestMatch.currentUser == null) {
+			InterestMatch.setCurrentUser && InterestMatch.setCurrentUser()
+		}
+		else {
+			clearInterval(interval);
+			InterestMatch.currentUser.save({
+				lat: position.coords.latitude,
+				lon: position.coords.longitude
+			});
+		}
+	}, 250);
 
 	// $elem.attr('data-lat', position.coords.latitude);
 	// var element = document.getElementById('geolocation');
@@ -63,13 +78,17 @@ var app = {
 
 	// Update DOM on a Received Event
 	receivedEvent: function(id) {
-		var parentElement = document.getElementById(id);
-		var listeningElement = parentElement.querySelector('.listening');
-		var receivedElement = parentElement.querySelector('.received');
+		// var parentElement = document.getElementById(id);
+		// var listeningElement = parentElement.querySelector('.listening');
+		// var receivedElement = parentElement.querySelector('.received');
 
-		listeningElement.setAttribute('style', 'display:none;');
-		receivedElement.setAttribute('style', 'display:block;');
+		// listeningElement.setAttribute('style', 'display:none;');
+		// receivedElement.setAttribute('style', 'display:block;');
 
-		console.log('Received Event: ' + id);
+		// console.log('Received Event: ' + id);
 	}
 };
+
+$(document).ready(function() {
+	app.initialize();
+});

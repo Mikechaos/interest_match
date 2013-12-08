@@ -4,3 +4,23 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 
 	retrieveUser: (id) ->
 		@findWhere id: id
+
+	checkIfEmailExists: (email) ->
+		if (user = @findWhere email: email)? then user else false
+
+	fbConnectUser: (fbConnect) ->
+		userExists = @checkIfEmailExists fbConnect.email
+		if userExists
+			InterestMatch.setCurrentUser(userExists.id)
+			@updateCoords()
+		else
+			@createFbConnect()
+	
+	createFbConnect: (fbConnect) ->
+		user = new InterestMatch.Models.User
+		# do some setting up head
+		user.save()
+		InterestMatch.setCurrentUser(user.id)
+
+	updateCoords: ->
+		console.log app.position

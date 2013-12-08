@@ -1,6 +1,6 @@
 class InterestMatch.Views.MyInterests extends Backbone.View
 	template: JST['interests/myInterests']
-	events:
+	events: ->
 
 	initialize: ->
 

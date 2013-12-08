@@ -1,0 +1,70 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <a class="navbar-brand" href="#">Project name</a>
+  <!--/.nav-collapse -->
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h3>My Profile</h3>
+  </div>
+  <h3>Name</h3>
+  <div class="jumbotron">
+          <img src= "http://i.telegraph.co.uk/multimedia/archive/02351/cross-eyed-cat_2351472k.jpg" width="250px" alt="Name" class="img-rounded">
+  </div>
+         <p><a class="btn btn-info btn-block" >Edit</a></p>
+         <div class="well">
+         	<table class="table table-striped">
+                  <tr>
+                    <td><h4>Sex:</h4></td>
+                    <td><button type="button" class="btn btn-default">Male</button>
+              			<button type="button" class="btn btn-default">Female</button>
+                        </td>
+                  </tr>
+                  <tr>
+                  	<td><h4>Age:</h4></td>
+                    <td><!--Need slider--></td>
+                  </tr>
+                  <tr>
+                  	<td><h4>Email:</h4></td>
+                    <td><div class="form-group">
+                  
+                  <input type="text" class="form-control" id="inputDefault" placeholder="Current@email.com"/>
+                  		</div></td>
+                 </tr>
+                 <tr>
+                 	<td><h4>Skype:</h4></td>
+                    <td><div class="form-group">
+                  
+                  <input type="text" class="form-control" id="inputDefault" placeholder="username"/>
+                  		</div></td>
+                </tr>
+            </table>
+             <p>
+                <button type="button" class="btn btn-info btn-lg btn-block">SAVE</button>
+              </p>
+  		</div>
+        <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+              Interest
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+              Main
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="gear">
+              ME
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
