@@ -1,0 +1,51 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <a class="navbar-brand" href="#">Project name</a>
+  <!--/.nav-collapse -->
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+    <div class="alert alert-dismissable alert-danger">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h3><a href="#" class="alert-link">Incomming Message</a></h3></strong>
+            </div>
+  <div class="jumbotron">
+          <img src= "http://i.telegraph.co.uk/multimedia/archive/02351/cross-eyed-cat_2351472k.jpg" width="250px" alt="Name" class="img-rounded">
+ <h3>Name</h3>
+  </div>
+         <p><a class="btn btn-info btn-block"><strong>Suggest Location</a></strong></p>
+         <div class="well">
+          <div class="form-group">
+                  <label class="control-label">Message</label>
+                  <div class="well well-lg">
+              <a class="text-info"> Jun W:</a> Hi Mike, Nice to Meet You!
+            </div>
+             <p>
+                <button type="button" class="btn btn-success btn-lg"><span class="glyphicon-phone-alt" style="float:left;">Accept</span></button>
+                <button type="button" class="btn btn-danger btn-lg"><span class="glyphicon-ban-circle" style="float:right;">Decline</span></button>
+              </p>
+      </div>
+        <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+              Interest
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+              Main
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="gear">
+              ME
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>

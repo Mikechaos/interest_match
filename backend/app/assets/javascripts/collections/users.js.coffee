@@ -18,7 +18,22 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 	
 	createFbConnect: (fbConnect) ->
 		user = new InterestMatch.Models.User
-		# do some setting up head
+                user.email = fbConnect.email
+                user.name = fbConnect.name
+                user.first_name = fbConnect.first_name
+                user.last_name = fbConnect.last_name
+                user.gender = fbConnect.l
+                try {
+                  var birthday = +new Date(fbConnect.birthday);
+                  user.age = ~~((Date.now() - birthday) / (31557600000));
+                } catch {}
+
+                try {
+                  if (fbConnect.gender) {
+                    user.gender = fbConnect.gender === 'female' ? 1 : 2;
+                  }
+                } catch {}
+
 		user.save()
 		InterestMatch.setCurrentUser(user.id)
 
