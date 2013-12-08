@@ -11,12 +11,20 @@ window.InterestMatch =
 	setCurrentUser: (id = 1) ->
 		InterestMatch.userInitialized.then =>
 			@currentUser = @users.findWhere id: id
-		
+
+	showCurrentView: ->
+		@currentView.render()
+		@currentView.$el.show()
+		$('#create_interest').html(@currentView.el)
+	closeCurrentView: ->
+		# @currentView.close()
+	showMyInterestsView: ->
+		@closeCurrentView()
+		@currentView = new InterestMatch.Views.MyInterests collection: @interests.filterByUserId(InterestMatch.currentUser.id)
+		@showCurrentView()
 	createInterestView: ->
-		@interestView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest
-		@interestView.render()
-		@interestView.$el.show()
-		$('#create_interest').html(@interestView.el)
+		@currentView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest
+		@showCurrentView()
 
 	fetchElements: ->
 		@fetchUsers()
@@ -34,4 +42,3 @@ window.InterestMatch =
 
 $(document).ready ->
 	InterestMatch.initialize()
-	Backbone.history.start()
