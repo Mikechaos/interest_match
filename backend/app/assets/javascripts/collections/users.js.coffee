@@ -30,7 +30,9 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		#if fbConnect.gender
 		#	user.gender = if fbConnect.gender is 'female' then 1 else 2;
 
-		user.save()
+		user.save null,
+			success: -> alert('coool')
+			error: -> alert('not so coool!!')
 		alert 1
 		alert user
 		InterestMatch.setCurrentUser(user.id)
