@@ -18,8 +18,6 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 	
 	createFbConnect: (fbConnect) ->
 		user = new InterestMatch.Models.User
-		alert fbConnect
-		alert fbConnect.email
 
 		user.set 'email', fbConnect.email
 		user.set 'name', fbConnect.name
@@ -33,13 +31,12 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		#	user.gender = if fbConnect.gender is 'female' then 1 else 2;
 
 
-		alert user.get('email')
-
 		user.save null,
 			success: -> alert('coool')
 			error: -> alert('not so coool!!')
+
 		alert 1
-		alert user
+
 		InterestMatch.setCurrentUser(user.id)
 
 	updateUserCoords: ->
