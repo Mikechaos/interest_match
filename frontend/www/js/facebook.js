@@ -21,7 +21,6 @@ function me() {
     if (response.error) {
       alert(JSON.stringify(response.error));
     } else {
-      alert(response.name);
       InterestMatch.users.fbConnectUser(response);
     }
   });

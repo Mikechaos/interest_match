@@ -17,17 +17,22 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		@updateUserCoords()
 	
 	createFbConnect: (fbConnect) ->
+		alert 'here'
 		user = new InterestMatch.Models.User
 		user.email = fbConnect.email
 		user.name = fbConnect.name
 		user.first_name = fbConnect.first_name
 		user.last_name = fbConnect.last_name
-		birthday = new Date(fbConnect.birthday);
+
+		#birthday = new Date(fbConnect.birthday);
 		#user.age = ~~((Date.now() - birthday) / (31557600000));
 
 		#if fbConnect.gender
 		#	user.gender = if fbConnect.gender is 'female' then 1 else 2;
+
 		user.save()
+		alert 1
+		alert user
 		InterestMatch.setCurrentUser(user.id)
 
 	updateUserCoords: ->
