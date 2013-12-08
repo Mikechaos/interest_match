@@ -12,6 +12,7 @@ window.InterestMatch =
 			@createInterestView()
 
 	createInterestView: ->
+		alert 'hey'
 		@interestView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest lon: @currentLon, lat: @currentLat
 		@interestView.render()
 		@interestView.$el.show()
@@ -53,7 +54,7 @@ window.InterestMatch =
 		console.log position
 		@currentLon = position.coords.longitude
 		@currentLat = position.coords.latitude
-		@initializedGeo.resolve[17~()
+		@initializedGeo.resolve()
 	onError: ->
 		alert 'shit'
 
