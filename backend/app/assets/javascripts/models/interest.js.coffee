@@ -8,4 +8,4 @@ class InterestMatch.Models.Interest extends Backbone.Model
 		user: 1
 
 	initialize: ->
-		@user = InterestMatch.users.retrieveUser @model.get('user_id')
+		@user = InterestMatch.users.retrieveUser @get('user_id')
