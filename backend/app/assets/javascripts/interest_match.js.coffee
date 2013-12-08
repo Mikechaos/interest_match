@@ -34,3 +34,4 @@ window.InterestMatch =
 
 $(document).ready ->
 	InterestMatch.initialize()
+	Backbone.history.start()

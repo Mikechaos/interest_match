@@ -14,9 +14,11 @@ class InterestMatch.Views.InterestsCreate extends Backbone.View
 	createInterest: ->
 		@model.set 'name', @$('#interest_name').val()
 		@model.set 'description', @$('#interest_description').val()
-		@model.set 'lat', InterestMatch.currentUsers.get('lat')
-		@model.set 'lon', InterestMatch.currentUsers.get('lon')
-		@model.save()
+		@model.set 'lat', InterestMatch.currentUser.get('lat')
+		@model.set 'lon', InterestMatch.currentUser.get('lon')
+		@model.save null,
+		@cleanForm()
 
 	cleanForm: ->
-		
+		_.each @formElem, (elem) ->
+			$(elem).html('')
