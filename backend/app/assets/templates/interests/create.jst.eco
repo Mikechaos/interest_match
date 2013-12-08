@@ -2,3 +2,5 @@
 <input id="interest_name" type="text">
 <textarea id="interest_description"></textarea>
 <button>Create</button>
+<input type="hidden" value="" id="interest_lon">
+<input type="hidden" value="" id="interest_lat">
