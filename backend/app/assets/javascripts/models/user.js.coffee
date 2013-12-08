@@ -3,7 +3,7 @@ class InterestMatch.Models.User extends Backbone.Model
 	defaults:
 		phone: null
 		skype: null
-		birthday: null
+		age: null
 		gender: null
 		lon: null
 		lat: null
