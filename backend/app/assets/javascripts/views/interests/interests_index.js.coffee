@@ -24,4 +24,4 @@ class InterestMatch.Views.InterestsIndex extends Backbone.View
 		
 	
 	showDesc: (e) ->
-		@$('tr.desc#' + e.currentTarget.id).toggleSlide()
+		@$('tr.desc#' + e.currentTarget.id).slideDown()
