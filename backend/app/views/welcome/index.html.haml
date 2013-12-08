@@ -1,0 +1,11 @@
+.jumbotron
+  .page-header
+    %h1 
+      %sup{ class: 'text-success' } [offline] 
+      Social Networking
+
+  %p.lead
+    We hate to play table tennis, pool and have dinners online! Join us and meet you offline!
+  %p
+    = link_to "Join us using Facebook", user_omniauth_authorize_path(:facebook), class: 'btn btn-lg btn-success'
+
