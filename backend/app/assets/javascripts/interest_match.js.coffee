@@ -5,8 +5,7 @@ window.InterestMatch =
 	Routers: {}
 
 	initialize: ->
-		@fetchUsers()
-		@fetchInterests()
+		@fetchElements()
 		@setGlobals()
 		#@initializedGeo.then =>
 		@createInterestView()
@@ -31,9 +30,14 @@ window.InterestMatch =
 	#triggerNavigator: ->
 	#	navigator.geolocation.getCurrentPosition(((position) => @onSuccess(position)), @onError, maximumAge: 0, timeout: 5000, enableHighAccuracy: true )
 
+	fetchElements: ->
+		@fetchUsers()
+		InterestMatch.userInitialized.then =>
+			@fetchInterests()
 	fetchUsers: ->
+		InterestMatch.userInitialized = $.Deferred();
 		@users = new InterestMatch.Collections.Users
-		@users.fetch success: => console.log @users
+		@users.fetch success: => console.log @users; InterestMatch.userInitialized.resolve()
 
 	fetchInterests: ->
 		@interests = new InterestMatch.Collections.Interests
