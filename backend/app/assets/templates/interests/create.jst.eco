@@ -1,0 +1,4 @@
+<label>Create Interests</label>
+<input id="interest_name" type="text">
+<textarea id="interest_description"></textarea>
+<button>Create</button>
