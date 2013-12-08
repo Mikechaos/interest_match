@@ -1,7 +1,7 @@
 Number.prototype.toRad = ->
 	this * Math.PI / 180;
 
-window.InterestMatch.helpers =
+@InterestMatch.helpers =
 
 	calculateDistance:(lat1, lon1, lat2, lon2) ->
 	
