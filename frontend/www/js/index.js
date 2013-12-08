@@ -17,8 +17,8 @@
  * under the License.
  */
 
-    function onSuccess(position) {
-        alert('hello');
+var onSuccess = function(position) {
+
         var element = document.getElementById('geolocation');
         element.innerHTML = 'Latitude: '           + position.coords.latitude              + '<br />' +
                             'Longitude: '          + position.coords.longitude             + '<br />' +
@@ -28,11 +28,9 @@
                             'Heading: '            + position.coords.heading               + '<br />' +
                             'Speed: '              + position.coords.speed                 + '<br />' +
                             'Timestamp: '          + position.timestamp                    + '<br />';
-    }
+    };
 
-    // onError Callback receives a PositionError object
-    //
-    function onError(error) {
+var onError = function(error) {
         alert('code: '    + error.code    + '\n' +
               'message: ' + error.message + '\n');
     }
@@ -55,8 +53,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: 0, timeout: 5000, enableHighAccuracy: true });
     },
+
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
@@ -68,5 +67,4 @@ var app = {
 
         console.log('Received Event: ' + id);
     }
-
 };
