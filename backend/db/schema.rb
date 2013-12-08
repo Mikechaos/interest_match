@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131208061831) do
+ActiveRecord::Schema.define(version: 20131208085717) do
 
   create_table "interests", force: true do |t|
     t.string   "name"
@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20131208061831) do
     t.string   "email"
     t.string   "phone"
     t.string   "skype"
-    t.date     "birthday"
     t.integer  "gender"
     t.float    "lat"
     t.float    "lon"
@@ -49,6 +48,7 @@ ActiveRecord::Schema.define(version: 20131208061831) do
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.integer  "age"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
