@@ -10,7 +10,7 @@ class InterestMatch.Collections.Interests extends Backbone.Collection
 			interest.user.get('gender') is gender
 	filterByAge: (minAge, maxAge) ->
 		@filter (interest) ->
-			(age = interest.user.get('age')) >= minAge or age <= maxAge or not age?
+			((age = interest.user.get('age')) >= minAge and age <= maxAge) or not age?
 
 	filterByRadius: (radius) ->
 		currentLat = InterestMatch.currentUser.lat
