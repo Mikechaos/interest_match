@@ -32,10 +32,8 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 
 
 		user.save null,
-			success: -> alert('coool')
-			error: -> alert('not so coool!!')
-
-		alert 1
+			success: -> console.log('coool')
+			error: -> console.log('not so coool!!')
 
 		InterestMatch.setCurrentUser(user.id)
 
