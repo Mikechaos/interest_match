@@ -571,8 +571,9 @@ cite {
 }
 
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin: 5px 0px 5px;
   border-bottom: 1px solid #1c1e22;
 }
 
@@ -630,7 +631,7 @@ dd {
 @media (min-width: 320px) {
   .dl-horizontal dt {
     float: left;
-    width: 160px;
+    width: 320px;
     overflow: hidden;
     clear: left;
     text-align: right;
@@ -804,7 +805,7 @@ pre code {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  min-width: 100px;
+  min-width: 320px;
 }
 
 .container:before,
@@ -859,19 +860,19 @@ pre code {
 
 @media (min-width: 320px) {
   .container {
-    width: 320px;
+    min-width: 320px;
   }
 }
 
 @media (min-width: 320px) {
   .container {
-    width: 320px;
+    min-width: 320px;
   }
 }
 
 @media (min-width: 320px) {
   .container {
-    width: 320px;
+    min-width: 320px;
   }
 }
 
@@ -5616,8 +5617,8 @@ a.thumbnail.active {
 }
 
 .alert {
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 5px;
+  margin-bottom: 5px;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -5641,6 +5642,7 @@ a.thumbnail.active {
 }
 
 .alert-dismissable {
+  padding-left: 35px;
   padding-right: 35px;
 }
 

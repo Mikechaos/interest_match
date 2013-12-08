@@ -1,0 +1,64 @@
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+    <a class="navbar-brand" href="#">Project name</a>
+  <!--/.nav-collapse -->
+</div>
+
+<!-- Begin page content -->
+<div class="container">
+  <div class="page-header">
+    <h3>Main</h3>
+  </div>
+  
+  <div class="span11">
+            <div class="alert alert-dismissable alert-info">
+              <button type="button" class="close" data-dismiss="alert">&times;</button>
+              <strong>5 Matches In Your Area:</strong>
+            </div>
+          </div>
+ <div class="bs-example table-responsive">
+              <table class="table table-striped table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th width="40%">Person</th>
+                    <th width="40%">Interest</th>
+                    <th width="20%">Distance</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>John Smith</td>
+                    <td>Cooking</td>
+                    <td>1 miles</td>
+                  </tr>
+                  <tr>
+                    <td>Jane Doe</td>
+                    <td>Music</td>
+                    <td>2 miles</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div><!-- /example -->
+  <div class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <ul class="nav navbar-nav">
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="plus">
+              Interest
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="info">
+              Filter
+            </a>
+          </li>
+          <li>
+            <a href="#page1" data-transition="slideup" data-theme="a" data-icon="gear">
+              ME
+            </a>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+</div>
