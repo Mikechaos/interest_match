@@ -19,9 +19,23 @@
 
 var onSuccess = function(position) {
 	var $elem
-	
-	$elem = $('#interest_lon').val(position.coords.longitude)
-	$elem = $('#interest_lat').val(position.coords.latitude)
+	console.log(position);
+	$elem = $('#interest_lon').val(position.coords.longitude);
+	$elem = $('#interest_lat').val(position.coords.latitude);
+	// InterestMatch.currentUser.set('lat', position.coords.latitude)
+	// InterestMatch.currentUser.set('lon', position.coords.longitude)
+	interval = setInterval(function () {
+		if (InterestMatch.currentUser == null) {
+			InterestMatch.setCurrentUser && InterestMatch.setCurrentUser()
+		}
+		else {
+			clearInterval(interval);
+			InterestMatch.currentUser.save({
+				lat: position.coords.latitude,
+				lon: position.coords.longitude
+			});
+		}
+	}, 2);
 
 	// $elem.attr('data-lat', position.coords.latitude);
 	// var element = document.getElementById('geolocation');
@@ -73,3 +87,7 @@ var app = {
 		// console.log('Received Event: ' + id);
 	}
 };
+
+$(document).ready(function() {
+	app.initialize();
+});
