@@ -8,9 +8,9 @@ window.InterestMatch =
 		@fetchElements()
 		@createInterestView()
 
-	setCurrentUser: ->
+	setCurrentUser: (id = 1) ->
 		InterestMatch.userInitialized.then =>
-			@currentUser = @users.findWhere id: 1
+			@currentUser = @users.findWhere id: id
 		
 	createInterestView: ->
 		@interestView = new InterestMatch.Views.InterestsCreate model: new InterestMatch.Models.Interest

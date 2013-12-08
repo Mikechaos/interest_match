@@ -19,6 +19,7 @@
 
 var onSuccess = function(position) {
 	var $elem
+	app.position = position;
 	console.log(position);
 	$elem = $('#interest_lon').val(position.coords.longitude);
 	$elem = $('#interest_lat').val(position.coords.latitude);
@@ -35,7 +36,7 @@ var onSuccess = function(position) {
 				lon: position.coords.longitude
 			});
 		}
-	}, 2);
+	}, 250);
 
 	// $elem.attr('data-lat', position.coords.latitude);
 	// var element = document.getElementById('geolocation');
