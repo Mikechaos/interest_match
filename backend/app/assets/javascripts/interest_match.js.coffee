@@ -70,4 +70,6 @@ window.InterestMatch =
 		console.log('Received Event: ' + id);
 
 $(document).ready ->
+	alert "hello world"
 	InterestMatch.initialize()
+	alert "hello world again"
