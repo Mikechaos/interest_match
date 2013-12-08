@@ -19,10 +19,10 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 	createFbConnect: (fbConnect) ->
 		alert 'here'
 		user = new InterestMatch.Models.User
-		user.email = fbConnect.email
-		user.name = fbConnect.name
-		user.first_name = fbConnect.first_name
-		user.last_name = fbConnect.last_name
+		user.set 'email', fbConnect.email
+		user.set 'name', fbConnect.name
+		user.set 'first_name', fbConnect.first_name
+		user.set 'last_name', fbConnect.last_name
 
 		#birthday = new Date(fbConnect.birthday);
 		#user.age = ~~((Date.now() - birthday) / (31557600000));
@@ -31,7 +31,7 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		#	user.gender = if fbConnect.gender is 'female' then 1 else 2;
 
 
-		alert user.email
+		alert user.get('email')
 
 		user.save null,
 			success: -> alert('coool')
