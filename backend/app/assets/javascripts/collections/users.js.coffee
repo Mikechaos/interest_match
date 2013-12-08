@@ -17,7 +17,10 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		@updateUserCoords()
 	
 	createFbConnect: (fbConnect) ->
-		alert 'here'
+		alert InterestMatch
+		alert InterestMatch.Models
+		alert InterestMatch.Models.User
+
 		user = new InterestMatch.Models.User
 		user.set 'email', fbConnect.email
 		user.set 'name', fbConnect.name
