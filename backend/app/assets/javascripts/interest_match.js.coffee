@@ -47,7 +47,7 @@ window.InterestMatch =
 	# function, we must explicity call 'app.receivedEvent(...);'
 	onDeviceReady: ->
 		app.receivedEvent('deviceready')
-		alert 'yes'
+		alert navigator
 		navigator.geolocation.getCurrentPosition(@onSuccess, @onError, maximumAge: 0, timeout: 5000, enableHighAccuracy: true )
 
 	onSuccess: (position) ->
