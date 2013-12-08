@@ -23,10 +23,10 @@ class InterestMatch.Collections.Users extends Backbone.Collection
 		user.first_name = fbConnect.first_name
 		user.last_name = fbConnect.last_name
 		birthday = new Date(fbConnect.birthday);
-		user.age = ~~((Date.now() - birthday) / (31557600000));
+		#user.age = ~~((Date.now() - birthday) / (31557600000));
 
-		if fbConnect.gender
-			user.gender = if fbConnect.gender is 'female' then 1 else 2;
+		#if fbConnect.gender
+		#	user.gender = if fbConnect.gender is 'female' then 1 else 2;
 		user.save()
 		InterestMatch.setCurrentUser(user.id)
 
