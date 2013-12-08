@@ -1,5 +1,5 @@
 class InterestMatch.Models.Interest extends Backbone.Model
-	urlRoot : '/interests'
+	urlRoot : 'http://ec2-54-200-102-151.us-west-2.compute.amazonaws.com:3000/interests'
 	defaults:
 		name: ""
 		description: ""
