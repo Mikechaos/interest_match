@@ -20,7 +20,7 @@ class InterestMatch.Views.InterestsIndex extends Backbone.View
           "<td>#{interest.user.get('first_name')}</td>" +
           "<td>#{interest.get('name')}</td>" +
           "<td>#{Math.round((distance / 5280) * 100) / 100} miles</td>" +
-        "</tr><tr style='background-color: rgb(75, 75, 75); display:none;' class='desc' id='interest#{interest.id}'><td>#{interest.get('description')}</td></tr>"
+        "</tr><tr style='background-color: rgb(75, 75, 75); display:none;' class='desc' id='interest#{interest.id}'><td colspan=3>#{interest.get('description')}</td></tr>"
 		@$('#matchCount').html(i)
 		@
 		
