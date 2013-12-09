@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require_tree ./lib
 //= require interest_match
 //= require_tree ../templates
 //= require_tree ./models
