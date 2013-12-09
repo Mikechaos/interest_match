@@ -3,7 +3,7 @@ class InterestMatch.Views.InterestsCreate extends Backbone.View
 	events:
 		"click #createButton": "createInterest"
 		"click #mainView": "showMainView"
-		"click #interestsView": "showInterestView"
+		"click #interestsView": "showMyInterestsView"
 	initialize: ->
 
 	render: ->
@@ -33,5 +33,5 @@ class InterestMatch.Views.InterestsCreate extends Backbone.View
 	showMainView: ->
 		InterestMatch.showMainView()
 
-	showInterestsView: ->
+	showMyInterestsView: ->
 		InterestMatch.showMyInterestsView()

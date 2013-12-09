@@ -4,6 +4,8 @@ class InterestMatch.Views.InterestsIndex extends Backbone.View
 
 	events: 
 		"click .interest_field": "showDesc"
+		"click #interestsView": "showMyInterestsView"
+
 	intialize: ->
 	
 	render: ->
@@ -25,3 +27,6 @@ class InterestMatch.Views.InterestsIndex extends Backbone.View
 	
 	showDesc: (e) ->
 		@$('tr.desc#' + e.currentTarget.id).slideDown()
+
+	showMyInterestsView: ->
+		InterestMatch.showMyInterestsView()
