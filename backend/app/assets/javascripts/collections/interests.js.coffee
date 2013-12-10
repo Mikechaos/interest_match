@@ -13,8 +13,9 @@ class InterestMatch.Collections.Interests extends Backbone.Collection
 			((age = interest.user.get('age')) >= minAge and age <= maxAge) or not age?
 
 	filterByRadius: (radius) ->
-		currentLat = InterestMatch.currentUser.lat
-		currentLon = InterestMatch.currentUser.lon
+		console.log "okokok", InterestMatch.currentUser
+		currentLat = InterestMatch.currentUser.get 'lat'
+		currentLon = InterestMatch.currentUser.get 'lon'
 		distanceFromCurrent = InterestMatch.helpers.calculateDistance.bind null, currentLat, currentLon
 		@filter (interest) ->
 			distanceFromCurrent(interest.get('lat'), interest.get('lon')) <= radius
