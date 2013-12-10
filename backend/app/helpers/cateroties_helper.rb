@@ -1,0 +1,2 @@
+module CaterotiesHelper
+end
